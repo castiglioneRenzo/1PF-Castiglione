@@ -7,10 +7,6 @@ mat-header-cell, mat-cell {
   padding: 15px;
 }
 
-mat-row:hover {
-  background-color: #959595;
-}
-
 h2 {
   margin-bottom: 20px;
   color: #1976d2;

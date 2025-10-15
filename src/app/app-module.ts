@@ -21,25 +21,13 @@ import { App } from './app';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { AlumnosListaComponent } from './components/alumnos-lista/alumnos-lista.component';
-import { AlumnoFormComponent } from './components/alumno-form/alumno-form.component';
-
-// Pipes
-import { NombreCompletoPipe } from './pipes/nombre-completo.pipe';
-
-// Directives
-import { TitleSizeDirective } from './directives/title-size.directive';
 
 @NgModule({
   declarations: [
     App,
     NavbarComponent,
     ToolbarComponent,
-    DashboardComponent,
-    AlumnosListaComponent,
-    AlumnoFormComponent,
-    NombreCompletoPipe,
-    TitleSizeDirective
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

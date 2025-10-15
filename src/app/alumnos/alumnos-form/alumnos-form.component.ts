@@ -1,24 +1,19 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { Alumno } from '../../interfaces/alumno.interface';
-import { C } from '@angular/cdk/keycodes';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-alumno-form',
-  templateUrl: './alumno-form.component.html',
-  styleUrl: './alumno-form.component.css',
+  templateUrl: './alumnos-form.component.html',
+  styleUrl: './alumnos-form.component.css',
   standalone: false
 })
 export class AlumnoFormComponent implements OnInit {
   alumnoForm: FormGroup;
-  @Output() sendAlumno = new EventEmitter<Alumno>();
-    
+  @Output() alumnoCreado = new EventEmitter<Omit<Alumno, 'id'>>();
 
-  constructor(
-    private fb: FormBuilder,
-    private router: Router
-  ) {
+  constructor(private fb: FormBuilder, private router: Router) {
     this.alumnoForm = this.fb.group({
       nombre: ['', [Validators.required, Validators.minLength(2)]],
       apellido: ['', [Validators.required, Validators.minLength(2)]],
@@ -32,8 +27,11 @@ export class AlumnoFormComponent implements OnInit {
   onSubmit(): void {
     if (this.alumnoForm.valid) {
       const nuevoAlumno: Omit<Alumno, 'id'> = this.alumnoForm.value;
-      this.sendAlumno.emit(this.alumnoForm.value);
-      console.log("Nuevo alumno:", nuevoAlumno);
+      
+      // Emitir el evento al componente padre
+      this.alumnoCreado.emit(nuevoAlumno);
+      
+      console.log("Nuevo alumno creado:", nuevoAlumno);
       alert('Alumno creado exitosamente');
       this.alumnoForm.reset();
       this.router.navigate(['/alumnos']);
@@ -73,9 +71,5 @@ export class AlumnoFormComponent implements OnInit {
     }
     
     return '';
-  }
-
-  onCancel(): void {
-    this.router.navigate(['/alumnos']);
   }
 }

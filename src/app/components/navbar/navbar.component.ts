@@ -9,7 +9,6 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
   menuItems = [
     { name: 'Inicio', route: '/dashboard' },
-    { name: 'Alumnos', route: '/alumnos' },
-    { name: 'Crear Alumno', route: '/alumnos/crear' }
+    { name: 'Alumnos', route: '/alumnos' }
   ];
 }

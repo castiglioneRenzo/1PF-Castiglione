@@ -1,5 +1,5 @@
 <div class="container">
-  <h2 titleSize>Lista de Alumnos</h2>
+  <h2 titleSize>Lista de Alumnos ({{ alumnos.length }})</h2>
 
   <mat-table [dataSource]="alumnos" class="mat-elevation-z8">
     <!-- ID Column -->
@@ -31,6 +31,4 @@
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
   </mat-table>
-
-  <button mat-raised-button color="primary" routerLink="/">Volver</button>
 </div>
