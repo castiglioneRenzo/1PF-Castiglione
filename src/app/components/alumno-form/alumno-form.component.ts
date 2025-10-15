@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Alumno } from '../../interfaces/alumno.interface';
+import { C } from '@angular/cdk/keycodes';
 
 @Component({
   selector: 'app-alumno-form',
@@ -11,6 +12,8 @@ import { Alumno } from '../../interfaces/alumno.interface';
 })
 export class AlumnoFormComponent implements OnInit {
   alumnoForm: FormGroup;
+  @Output() sendAlumno = new EventEmitter<Alumno>();
+    
 
   constructor(
     private fb: FormBuilder,
@@ -29,10 +32,11 @@ export class AlumnoFormComponent implements OnInit {
   onSubmit(): void {
     if (this.alumnoForm.valid) {
       const nuevoAlumno: Omit<Alumno, 'id'> = this.alumnoForm.value;
-      // Aquí normalmente enviarías los datos a un servicio
-      console.log('Nuevo alumno:', nuevoAlumno);
+      this.sendAlumno.emit(this.alumnoForm.value);
+      console.log("Nuevo alumno:", nuevoAlumno);
       alert('Alumno creado exitosamente');
       this.alumnoForm.reset();
+      this.router.navigate(['/alumnos']);
     } else {
       this.markFormGroupTouched();
     }

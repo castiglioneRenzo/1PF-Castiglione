@@ -25,4 +25,10 @@ export class AlumnosListaComponent implements OnInit {
       { id: 5, nombre: 'Pedro', apellido: 'Rodríguez', email: 'pedro.rodriguez@email.com', edad: 23 }
     ];
   }
+
+  onAlumnoAdded(alumno: Omit<Alumno, 'id'>): void {
+    const newId = this.alumnos.length > 0 ? Math.max(...this.alumnos.map(u => u.id)) + 1 : 1;
+    this.alumnos.push({ id: newId, ...alumno });
+    console.log('Nuevo alumno agregado:', alumno);
+  }
 }
