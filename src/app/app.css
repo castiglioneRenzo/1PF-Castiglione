@@ -1,5 +1,6 @@
 .sidenav-container {
-  height: 100vh;
+  height: calc(100vh - 64px); /* Resta la altura del toolbar */
+  margin-top: 0;
 }
 
 .sidenav {
@@ -8,6 +9,6 @@
 
 .main-content {
   padding: 20px;
-  height: calc(100vh - 64px);
+  height: 100%;
   overflow: auto;
 }
