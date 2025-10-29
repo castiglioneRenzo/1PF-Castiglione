@@ -7,5 +7,25 @@ import { Component } from '@angular/core';
   styleUrl: './dashboard.css'
 })
 export class Dashboard {
-
+  listItems = [
+    {
+      name: 'Inicio',
+      description: 'Overview of the platform and recent activities.',
+      url: '/dashboard',
+      icon: 'home'
+    },
+    {
+      name: 'Cursos',
+      description: 'Manage and explore the courses offered in the platform.',
+      url: '/cursos',
+      icon: 'school'
+    },
+    {
+      name: 'Estudiantes',
+      description: 'View and manage student information and progress.',
+      url: '/estudiantes',
+      icon: 'people'
+    }
+    
+  ]
 }

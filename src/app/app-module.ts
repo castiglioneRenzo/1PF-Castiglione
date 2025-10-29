@@ -21,21 +21,21 @@ import { App } from './app';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { Shared } from './shared/shared';
+import { SharedModule } from './shared/shared-module';
 
 @NgModule({
   declarations: [
     App,
     NavbarComponent,
     ToolbarComponent,
-    DashboardComponent,
-    Shared
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    SharedModule,
     // Angular Material Modules
     MatToolbarModule,
     MatSidenavModule,

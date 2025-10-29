@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { Dashboard } from './featured/dashboard/dashboard';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -9,7 +10,13 @@ const routes: Routes = [
     path: 'alumnos', 
     loadChildren: () => import('./alumnos/alumnos.module').then(m => m.AlumnosModule)
   },
-  { path: '**', redirectTo: '/dashboard' }
+  { path: '**', redirectTo: '/dashboard' },
+   {
+    path: 'dashboard',
+    component: Dashboard,
+    loadChildren: () =>
+      import('./featured/dashboard/dashboard-module').then((m) => m.DashboardModule),
+  },
 ];
 
 @NgModule({
