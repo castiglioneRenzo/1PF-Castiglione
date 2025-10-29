@@ -3,9 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { DashboardRoutingModule } from './dashboard-routing-module';
 import { Dashboard } from './dashboard';
-import { Courses } from './courses/courses';
 import { Home } from './home/home';
-import { Students } from './students/students';
 import { SharedModule } from '../../shared/shared-module';
 
 
