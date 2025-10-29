@@ -21,13 +21,15 @@ import { App } from './app';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { Shared } from './shared/shared';
 
 @NgModule({
   declarations: [
     App,
     NavbarComponent,
     ToolbarComponent,
-    DashboardComponent
+    DashboardComponent,
+    Shared
   ],
   imports: [
     BrowserModule,
