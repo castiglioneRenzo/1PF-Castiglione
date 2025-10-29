@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -18,12 +19,14 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { provideNativeDateAdapter } from '@angular/material/core';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    RouterModule,
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
@@ -40,10 +43,12 @@ import { provideNativeDateAdapter } from '@angular/material/core';
     MatDatepickerModule,
     MatSelectModule,
     MatCheckboxModule,
+    MatTooltipModule,
   ],
   exports: [
     CommonModule,
     ReactiveFormsModule,
+    RouterModule,
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
@@ -60,6 +65,7 @@ import { provideNativeDateAdapter } from '@angular/material/core';
     MatDatepickerModule,
     MatSelectModule,
     MatCheckboxModule,
+    MatTooltipModule,
   ],
   providers: [provideNativeDateAdapter()],
 })

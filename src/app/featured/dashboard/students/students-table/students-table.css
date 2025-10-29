@@ -1,0 +1,15 @@
+#create {
+  margin-bottom: 1rem;
+}
+
+mat-form-field {
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-elevation-z8 {
+  margin-top: 1rem;
+}
