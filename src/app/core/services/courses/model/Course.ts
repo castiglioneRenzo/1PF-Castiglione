@@ -20,5 +20,6 @@ export const courseColumns: string[] = [
     'description',
     'beginDate',
     'endDate',
-    'status'
+    'status',
+    'actions'
 ];

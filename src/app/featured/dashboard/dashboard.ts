@@ -17,13 +17,13 @@ export class Dashboard {
     {
       name: 'Cursos',
       description: 'Manage and explore the courses offered in the platform.',
-      url: '/cursos',
+      url: '/dashboard/courses',
       icon: 'school'
     },
     {
       name: 'Estudiantes',
       description: 'View and manage student information and progress.',
-      url: '/estudiantes',
+      url: '/dashboard/students',
       icon: 'people'
     }
     
