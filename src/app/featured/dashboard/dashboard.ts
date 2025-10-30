@@ -25,6 +25,12 @@ export class Dashboard {
       description: 'View and manage student information and progress.',
       url: '/dashboard/students',
       icon: 'people'
+    },
+    {
+      name: 'Login',
+      description: 'Access the login page to authenticate users.',
+      url: '/login',
+      icon: 'login'
     }
     
   ]

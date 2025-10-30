@@ -2,16 +2,16 @@
 .drawer-container {
   width: 100%;
   height: 100vh;
-  background-color: #fafafa;
+  background-color: #1a1a2e;
 }
 
 /* Sidenav (menú lateral) */
 .sidenav {
   width: 250px;
   padding: 1rem 0;
-  background: linear-gradient(180deg, #3f51b5 0%, #283593 100%);
+  background: linear-gradient(180deg, #16213e 0%, #0f3460 100%);
   color: white;
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
 }
 
 .sidenav h4 {
@@ -19,8 +19,8 @@
   margin: 0 0 1rem 0;
   font-size: 1.25rem;
   font-weight: 500;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
   text-align: center;
 }
 
@@ -30,36 +30,40 @@ mat-nav-list {
 }
 
 mat-nav-list a {
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: rgba(255, 255, 255, 0.95) !important;
   transition: all 0.3s ease;
   border-left: 3px solid transparent;
   margin: 0.25rem 0;
 }
 
 mat-nav-list a:hover {
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  border-left-color: #ff4081;
-  color: white !important;
+  background-color: rgba(83, 168, 226, 0.15) !important;
+  border-left-color: #53a8e2;
+  color: #ffffff !important;
 }
 
 mat-nav-list a.active,
 mat-nav-list a[aria-current="page"] {
-  background-color: rgba(255, 255, 255, 0.15) !important;
-  border-left-color: #ff4081;
-  color: white !important;
+  background-color: rgba(83, 168, 226, 0.25) !important;
+  border-left-color: #53a8e2;
+  color: #ffffff !important;
   font-weight: 500;
 }
 
+mat-nav-list a span[matlistitemline] {
+  color: #ffffff; /* Cambia este valor al color que desees */
+}
+
 mat-nav-list mat-icon {
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: rgba(255, 255, 255, 0.95) !important;
   margin-right: 0.5rem;
 }
 
 /* Toolbar */
 mat-toolbar {
-  background: linear-gradient(90deg, #3f51b5 0%, #5c6bc0 100%) !important;
+  background: linear-gradient(90deg, #0f3460 0%, #16213e 100%) !important;
   color: white !important;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -81,18 +85,19 @@ mat-toolbar mat-icon {
 .main-content {
   padding: 2rem;
   min-height: calc(100vh - 64px);
-  background-color: #fafafa;
+  background-color: #1a1a2e;
+  color: #e0e0e0;
   overflow-y: auto;
 }
 
 /* Títulos dentro del contenido */
 .main-content h1 {
-  color: #3f51b5;
+  color: #53a8e2;
   font-size: 2rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #e0e0e0;
+  border-bottom: 2px solid #2d2d44;
 }
 
 /* Dashboard cards - para la página de inicio */
@@ -122,17 +127,17 @@ mat-toolbar mat-icon {
   font-size: 48px;
   height: 48px;
   width: 48px;
-  color: #1976d2;
+  color: #53a8e2;
 }
 
 .dashboard-card h3 {
   margin: 15px 0 10px 0;
-  color: #1976d2;
+  color: #53a8e2;
 }
 
 h2 {
   margin-bottom: 20px;
-  color: #1976d2;
+  color: #53a8e2;
 }
 
 /* Responsividad */
@@ -174,14 +179,14 @@ h2 {
 }
 
 .main-content::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #16213e;
 }
 
 .main-content::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #53a8e2;
   border-radius: 4px;
 }
 
 .main-content::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #6bb8ed;
 }
